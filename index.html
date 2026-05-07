@@ -882,6 +882,19 @@ function startQuiz() {
   if (!email || !email.includes('@')) { alert('Please enter a valid email address!'); return; }
   state.firstName = name;
   state.email = email;
+
+  fetch('https://services.leadconnectorhq.com/hooks/ucphPUkSafuQF0ZCZh1T/webhook-trigger/54531478-e2bc-406b-9500-35242e28e4ff', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      firstName: name,
+      email: email,
+      quizResult: '',
+      source: 'soul-prosperity-quiz-funnel',
+      stage: 'optin'
+    })
+  }).catch(() => {});
+
   state.history.push('q1');
   showScreen('q1');
 }
@@ -912,6 +925,19 @@ function startLoading() {
 // ─── BUILD RESULT PAGE ───────────────────────────────────
 function buildResult() {
   const profileKey = getProfile();
+
+  fetch('https://services.leadconnectorhq.com/hooks/ucphPUkSafuQF0ZCZh1T/webhook-trigger/54531478-e2bc-406b-9500-35242e28e4ff', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      firstName: state.firstName,
+      email: state.email,
+      quizResult: profileKey,
+      source: 'soul-prosperity-quiz-funnel',
+      stage: 'result'
+    })
+  }).catch(() => {});
+
   const p = profiles[profileKey];
   const name = state.firstName;
 
