@@ -8,10 +8,10 @@
 <!-- ── OG / SOCIAL META ── -->
 <meta name="description" content="Free 60-second Kingdom Business Assessment for blue-collar Christian business owners. Discover your stage and get a personalized roadmap.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="What's Your Kingdom Business Stage? — Soul Prosperity">
+<meta property="og:title" content="What's Blocking You From Writing Your eBook? — Soul Prosperity">
 <meta property="og:description" content="Answer 6 questions. Get a personalized Kingdom roadmap. Free for blue-collar Christian business owners.">
 <meta property="og:image" content="https://gmoney0112-create.github.io/soul-prosperity-quiz-funnel/og-image.png">
-<meta property="og:url" content="https://quiz.soulprosperity.com">
+<meta property="og:url" content="https://gmoney0112-create.github.io/soul-prosperity-quiz-funnel/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="What's Your Kingdom Business Stage?">
 <meta name="twitter:description" content="Free 60-second assessment for blue-collar Christian business owners.">
@@ -144,242 +144,302 @@ src="https://www.facebook.com/tr?id=1655287592408855&ev=PageView&noscript=1"/></
 
   /* ── CARD ── */
   .card {
-    background: rgba(18,32,64,0.6);
-    border: 1px solid rgba(201,168,76,0.22);
-    border-radius: 18px;
-    padding: 32px 28px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    backdrop-filter: blur(14px);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 20px;
+    padding: 40px 36px;
+    backdrop-filter: blur(10px);
   }
+  @media(max-width:520px){ .card { padding: 28px 20px; } }
 
-  .headline {
+  /* ── INTRO SCREEN ── */
+  .intro-eyebrow {
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold); font-weight: 600; margin-bottom: 16px;
+  }
+  .intro-headline {
     font-family: 'Playfair Display', serif;
     font-size: clamp(28px, 5vw, 44px);
     font-weight: 900;
     line-height: 1.15;
-    margin-bottom: 14px;
-    color: var(--cream);
+    color: var(--white);
+    margin-bottom: 16px;
   }
-  .subhead {
-    color: rgba(247,243,236,0.82);
-    font-size: 16px;
-    line-height: 1.65;
-    max-width: 520px;
-    margin: 0 auto 26px;
+  .intro-headline span { color: var(--gold-light); }
+  .intro-sub {
+    font-size: 16px; line-height: 1.7;
+    color: rgba(247,243,236,0.75);
+    margin-bottom: 28px;
   }
-
-  .inputs {
-    display: grid; grid-template-columns: 1fr;
-    gap: 12px;
-    margin: 18px 0 20px;
+  .intro-pills {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin-bottom: 32px;
   }
-
-  input[type="text"], input[type="email"] {
-    width: 100%;
-    padding: 14px 14px;
-    border-radius: 12px;
-    border: 1px solid rgba(201,168,76,0.25);
-    background: rgba(10,22,40,0.55);
-    color: var(--cream);
-    outline: none;
-    font-size: 15px;
-  }
-  input::placeholder { color: rgba(138,155,189,0.8); }
-  input:focus { border-color: rgba(232,201,106,0.65); box-shadow: 0 0 0 4px rgba(201,168,76,0.1); }
-
-  .btn-primary {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    color: var(--navy);
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-size: 13px;
-    padding: 16px 18px;
-    border-radius: 14px;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 14px 40px rgba(201,168,76,0.25); }
-
-  .fineprint {
-    margin-top: 14px;
-    font-size: 12px;
-    color: rgba(138,155,189,0.9);
-    line-height: 1.6;
-  }
-
-  .options-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin-top: 18px;
-  }
-
-  .option {
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(201,168,76,0.08);
     border: 1px solid rgba(201,168,76,0.2);
-    background: rgba(10,22,40,0.45);
-    border-radius: 14px;
-    padding: 16px 16px;
+    border-radius: 100px; padding: 7px 14px;
+    font-size: 13px; color: var(--cream-dark);
+  }
+  .pill::before { content: '✓'; color: var(--gold); font-weight: 700; }
+
+  /* ── OPTIN FORM ── */
+  .optin-group {
+    display: flex; flex-direction: column; gap: 12px;
+    margin-bottom: 20px;
+  }
+  .optin-group input {
+    width: 100%;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px; color: var(--white);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .optin-group input::placeholder { color: rgba(255,255,255,0.3); }
+  .optin-group input:focus { border-color: var(--gold); }
+
+  /* ── BUTTONS ── */
+  .btn-primary {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-light) 100%);
+    border: none; border-radius: 14px;
+    padding: 18px 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px; font-weight: 700;
+    color: var(--navy);
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 8px 32px rgba(201,168,76,0.25);
+    position: relative; overflow: hidden;
+  }
+  .btn-primary::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, transparent, rgba(255,255,255,0.15), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,168,76,0.35); }
+  .btn-primary:hover::after { transform: translateX(100%); }
+  .btn-primary:active { transform: translateY(0); }
+
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 10px; padding: 11px 22px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px; color: var(--text-light);
+    cursor: pointer; transition: all 0.2s;
+    margin-top: 12px;
+  }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* ── QUESTION ── */
+  .question-label {
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); font-weight: 600; margin-bottom: 12px;
+  }
+  .question-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(20px, 3.5vw, 28px);
+    font-weight: 700; line-height: 1.3;
+    color: var(--white); margin-bottom: 8px;
+  }
+  .question-sub {
+    font-size: 14px; color: var(--text-light);
+    margin-bottom: 28px; line-height: 1.6;
+  }
+
+  /* ── ANSWER OPTIONS ── */
+  .options-grid {
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .option {
+    display: flex; align-items: flex-start; gap: 16px;
+    background: rgba(255,255,255,0.04);
+    border: 1.5px solid rgba(201,168,76,0.12);
+    border-radius: 14px; padding: 16px 20px;
     cursor: pointer;
     transition: all 0.2s;
-    display: flex; align-items: center; gap: 14px;
+    text-align: left;
   }
-  .option:hover { border-color: rgba(232,201,106,0.55); transform: translateY(-1px); }
+  .option:hover {
+    background: rgba(201,168,76,0.08);
+    border-color: rgba(201,168,76,0.35);
+    transform: translateX(4px);
+  }
   .option.selected {
-    border-color: rgba(232,201,106,0.9);
-    box-shadow: 0 16px 40px rgba(201,168,76,0.18);
-    background: rgba(18,32,64,0.8);
-  }
-
-  .opt-icon {
-    width: 42px; height: 42px;
-    border-radius: 12px;
     background: rgba(201,168,76,0.12);
+    border-color: var(--gold);
+  }
+  .option-letter {
+    flex-shrink: 0;
+    width: 32px; height: 32px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 8px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 18px; flex-shrink: 0;
+    font-size: 13px; font-weight: 700; color: var(--gold);
+    transition: all 0.2s;
   }
-
-  .opt-title { font-weight: 600; color: var(--cream); font-size: 15px; margin-bottom: 2px; }
-  .opt-desc { font-size: 13px; color: rgba(138,155,189,0.9); line-height: 1.45; }
-
-  .back-btn {
-    margin-top: 18px;
-    background: transparent;
-    border: 1px solid rgba(201,168,76,0.22);
-    color: rgba(247,243,236,0.85);
-    padding: 10px 16px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: all 0.15s;
+  .option.selected .option-letter {
+    background: var(--gold);
+    color: var(--navy);
+    border-color: var(--gold);
   }
-  .back-btn:hover { border-color: rgba(232,201,106,0.6); transform: translateY(-1px); }
+  .option-text { font-size: 15px; line-height: 1.5; color: var(--cream); padding-top: 4px; }
+  .option-sub { font-size: 13px; color: var(--text-light); margin-top: 3px; }
 
   /* ── LOADING ── */
-  .loading {
-    text-align: center;
+  .loading-screen {
+    text-align: center; padding: 60px 20px;
   }
-  .spinner {
-    width: 44px; height: 44px;
-    border: 4px solid rgba(201,168,76,0.25);
-    border-top-color: rgba(232,201,106,0.95);
-    border-radius: 50%;
-    margin: 20px auto;
-    animation: spin 0.8s linear infinite;
+  .loading-icon {
+    font-size: 48px; margin-bottom: 20px;
+    animation: pulse 1.5s ease-in-out infinite;
   }
-  @keyframes spin { to { transform: rotate(360deg); } }
-
-  /* ── RESULT CARD ── */
-  .result-hero { text-align: center; margin-bottom: 22px; }
-  .result-emoji { font-size: 54px; display: inline-block; margin-bottom: 12px; }
-  .result-label {
-    display: inline-block;
-    background: rgba(201,168,76,0.12);
-    border: 1px solid rgba(201,168,76,0.28);
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.1)} }
+  .loading-bar-track {
+    width: 100%; height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 100px; overflow: hidden;
+    margin: 24px 0 16px;
+  }
+  .loading-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
     border-radius: 100px;
-    padding: 6px 16px;
-    font-size: 12px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--gold-light);
-    font-weight: 600;
-    margin-bottom: 14px;
+    width: 0%; animation: loadFill 2.5s ease forwards;
+  }
+  @keyframes loadFill { to { width: 100%; } }
+  .loading-text { font-size: 14px; color: var(--text-light); }
+
+  /* ── RESULTS ── */
+  .result-hero {
+    text-align: center;
+    padding: 8px 0 32px;
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    margin-bottom: 32px;
+  }
+  .result-emoji { font-size: 56px; margin-bottom: 16px; display: block; }
+  .result-label {
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold); font-weight: 600; margin-bottom: 10px;
   }
   .result-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(24px, 4.4vw, 36px);
-    font-weight: 900;
-    margin-bottom: 10px;
-    line-height: 1.25;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 900; color: var(--white);
+    margin-bottom: 14px; line-height: 1.2;
   }
   .result-desc {
-    color: rgba(247,243,236,0.82);
-    font-size: 15px;
-    line-height: 1.75;
-    max-width: 560px;
-    margin: 0 auto;
+    font-size: 15px; line-height: 1.75;
+    color: rgba(247,243,236,0.75);
+    max-width: 480px; margin: 0 auto;
   }
 
   .result-offer {
-    margin-top: 22px;
-    background: rgba(10,22,40,0.55);
-    border: 1px solid rgba(201,168,76,0.2);
-    border-radius: 16px;
-    padding: 18px 18px;
+    background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.04));
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 16px; padding: 28px;
+    margin-bottom: 24px;
   }
   .offer-eyebrow {
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgba(138,155,189,0.9);
-    margin-bottom: 6px;
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); font-weight: 600; margin-bottom: 12px;
   }
   .offer-name {
-    font-weight: 700;
-    font-size: 16px;
-    color: var(--cream);
-    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 700;
+    color: var(--white); margin-bottom: 8px;
   }
   .offer-price {
-    font-family: 'Playfair Display', serif;
-    font-size: 34px;
-    color: var(--gold-light);
-    margin-bottom: 10px;
-    line-height: 1;
+    font-size: 32px; font-weight: 700; color: var(--gold-light);
+    margin-bottom: 12px;
   }
-  .offer-price span { font-size: 12px; color: rgba(138,155,189,0.9); font-family: 'DM Sans', sans-serif; font-weight: 500; }
-
-  .offer-bullets { list-style: none; margin-top: 10px; display: grid; gap: 8px; }
+  .offer-price span { font-size: 16px; font-weight: 400; color: var(--text-light); }
+  .offer-bullets { list-style: none; }
   .offer-bullets li {
-    display: flex; gap: 10px; align-items: flex-start;
-    font-size: 13px;
-    color: rgba(247,243,236,0.84);
-    line-height: 1.5;
+    font-size: 14px; color: var(--cream-dark);
+    padding: 6px 0; display: flex; gap: 10px; align-items: flex-start;
   }
-  .offer-bullets li::before { content: '✓'; color: var(--gold); font-weight: 700; margin-top: 1px; }
-
-  .guarantee-badge {
-    display: flex; gap: 12px; align-items: flex-start;
-    margin-top: 18px;
-    background: rgba(46, 204, 113, 0.08);
-    border: 1px solid rgba(46, 204, 113, 0.22);
-    border-radius: 14px;
-    padding: 14px 14px;
-  }
-  .guarantee-icon { font-size: 18px; }
-  .guarantee-text { font-size: 12.5px; line-height: 1.55; color: rgba(247,243,236,0.86); }
+  .offer-bullets li::before { content: '✦'; color: var(--gold); font-size: 11px; margin-top: 3px; flex-shrink:0; }
 
   .upsell-nudge {
-    margin-top: 14px;
-    font-size: 13px;
-    color: rgba(138,155,189,0.92);
-    background: rgba(18,32,64,0.45);
-    border: 1px solid rgba(201,168,76,0.14);
-    border-radius: 14px;
-    padding: 12px 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px; padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 13px; color: var(--text-light); line-height: 1.6;
+    text-align: center;
   }
+  .upsell-nudge strong { color: var(--cream); }
+
+  .guarantee-badge {
+    display: flex; align-items: center; gap: 14px;
+    background: rgba(46,204,113,0.06);
+    border: 1px solid rgba(46,204,113,0.2);
+    border-radius: 12px; padding: 16px 20px;
+    margin-bottom: 24px;
+  }
+  .guarantee-icon { font-size: 28px; flex-shrink: 0; }
+  .guarantee-text { font-size: 13px; color: var(--cream-dark); line-height: 1.5; }
+  .guarantee-text strong { color: var(--success); display: block; margin-bottom: 2px; }
 
   .scripture-box {
-    margin-top: 16px;
-    border-left: 3px solid rgba(201,168,76,0.65);
-    padding: 12px 14px;
-    background: rgba(10,22,40,0.4);
-    border-radius: 12px;
+    text-align: center; padding: 20px;
+    border-top: 1px solid rgba(201,168,76,0.12);
+    margin-top: 8px;
   }
-  .scripture-text { font-family: 'Playfair Display', serif; font-size: 15px; color: rgba(247,243,236,0.9); margin-bottom: 6px; }
-  .scripture-ref { font-size: 12px; color: rgba(138,155,189,0.9); letter-spacing: 0.08em; text-transform: uppercase; }
+  .scripture-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px; font-style: italic;
+    color: rgba(201,168,76,0.8); line-height: 1.6;
+    margin-bottom: 6px;
+  }
+  .scripture-ref { font-size: 12px; color: var(--text-light); letter-spacing: 1px; }
 
-  /* ── RESPONSIVE ── */
-  @media(min-width:700px){
-    .inputs { grid-template-columns: 1fr 1fr; }
-    .btn-primary { width: auto; }
-    .options-grid { grid-template-columns: 1fr 1fr; }
+  /* ── SOCIAL PROOF ── */
+  .social-proof {
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    margin-top: 20px;
+    font-size: 13px; color: var(--text-light);
   }
+  .avatars { display: flex; }
+  .avatar {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-dark), var(--navy-light));
+    border: 2px solid var(--navy);
+    margin-left: -8px; display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+  }
+  .avatars .avatar:first-child { margin-left: 0; }
+  .stars { color: var(--gold); font-size: 12px; letter-spacing: 1px; }
+
+  /* ── DISCLAIMER ── */
+  .disclaimer {
+    text-align: center; font-size: 11px;
+    color: rgba(138,155,189,0.5);
+    margin-top: 32px; line-height: 1.6;
+    max-width: 500px;
+  }
+
+  /* nav dots */
+  .nav-row { display: flex; justify-content: space-between; align-items: center; margin-top: 24px; }
+  .back-btn {
+    background: none; border: none;
+    color: var(--text-light); font-size: 13px; cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    display: flex; align-items: center; gap: 6px;
+    transition: color 0.2s;
+  }
+  .back-btn:hover { color: var(--gold); }
 </style>
 </head>
 <body>
@@ -389,216 +449,474 @@ src="https://www.facebook.com/tr?id=1655287592408855&ev=PageView&noscript=1"/></
 
 <div class="quiz-wrapper">
 
+  <!-- HEADER -->
   <div class="quiz-header">
-    <div class="brand-badge">Soul Prosperity</div>
-    <div class="progress-bar-wrap">
-      <div class="progress-meta">
-        <span id="stepLabel">Step 1 of 3</span>
-        <span id="progressPct">0%</span>
-      </div>
-      <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <div class="brand-badge">Soul Prosperity · eBook Creator Assessment</div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-bar-wrap" id="progressWrap" style="display:none;">
+    <div class="progress-meta">
+      <span id="progressLabel">Question 1 of 6</span>
+      <span id="progressPct">0%</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill" style="width:0%"></div>
     </div>
   </div>
 
-  <!-- OPT-IN SCREEN -->
-  <section class="screen active" id="screen-optin">
-    <div class="card" style="text-align:center;">
-      <h1 class="headline">What's Your Kingdom<br>Business Stage?</h1>
-      <p class="subhead">Answer 6 questions. Get a personalized roadmap. Then grab the <strong>exact next resource</strong> you need to move forward this week.</p>
-
-      <div class="inputs">
-        <input id="firstName" type="text" placeholder="First name" autocomplete="given-name">
-        <input id="emailInput" type="email" placeholder="Email address" autocomplete="email">
-      </div>
-
-      <button class="btn-primary" onclick="startQuiz()">Start the 60-Second Assessment →</button>
-      <div class="fineprint">By continuing, you agree to receive emails and agree to our <a href="/soul-prosperity-quiz-funnel/terms.html" style="color:var(--gold-light)">Terms</a> and <a href="/soul-prosperity-quiz-funnel/privacy.html" style="color:var(--gold-light)">Privacy Policy</a>.</div>
-    </div>
-  </section>
-
-  <!-- QUESTION 1 -->
-  <section class="screen" id="q1">
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SCREEN 0: INTRO -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="screen active" id="screen-intro">
     <div class="card">
-      <div class="headline" style="font-size:28px;">1) Where are you in your business journey?</div>
-      <div class="options-grid">
-        <div class="option" onclick="selectOption(this,'q1','seedling')"><div class="opt-icon">🌱</div><div><div class="opt-title">Just starting</div><div class="opt-desc">I have a vision, but I’m not consistent yet.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q1','builder')"><div class="opt-icon">🧱</div><div><div class="opt-title">Grinding but stuck</div><div class="opt-desc">I’m working, but income is inconsistent.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q1','operator')"><div class="opt-icon">⚙️</div><div><div class="opt-title">Operating</div><div class="opt-desc">I’m making money, but I need systems.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q1','scaler')"><div class="opt-icon">🚀</div><div><div class="opt-title">Scaling</div><div class="opt-desc">I’m ready to build a community or legacy brand.</div></div></div>
+      <div class="intro-eyebrow">Free 60-Second Assessment</div>
+      <h1 class="intro-headline">
+        What's Your <span>eBook Creator Type?</span>
+      </h1>
+      <p class="intro-sub">
+        Answer 6 quick questions and find out exactly what's stopping you from writing, publishing, and profiting from your first eBook — plus a personalized next step.
+      </p>
+      <div class="intro-pills">
+        <span class="pill">Takes 60 seconds</span>
+        <span class="pill">Personalized result</span>
+        <span class="pill">Free to take</span>
+        <span class="pill">Faith-based framework</span>
       </div>
-      <button class="back-btn" onclick="goBack()">← Back</button>
-    </div>
-  </section>
 
-  <!-- QUESTION 2 -->
-  <section class="screen" id="q2">
+      <div class="optin-group" id="optinGroup">
+        <input type="text" id="firstName" placeholder="Your first name" />
+        <input type="email" id="emailInput" placeholder="Your best email (results go here)" />
+      </div>
+
+      <button class="btn-primary" onclick="startQuiz()">
+        Discover My Creator Type →
+      </button>
+
+      <div class="social-proof">
+        <div class="avatars">
+          <div class="avatar">TG</div>
+          <div class="avatar">JM</div>
+          <div class="avatar">RK</div>
+          <div class="avatar">AL</div>
+        </div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <span>2,400+ blue-collar Christian authors have taken this quiz</span>
+        </div>
+      </div>
+    </div>
+    <p class="disclaimer">No spam. Ever. Your info is safe with us. Unsubscribe anytime.</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SCREEN 1: Q1 -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="screen" id="screen-q1">
     <div class="card">
-      <div class="headline" style="font-size:28px;">2) What’s your biggest blocker right now?</div>
+      <div class="question-label">Question 1 of 6</div>
+      <div class="question-text">Where are you right now with your eBook?</div>
+      <div class="question-sub">Be honest — there's no wrong answer. This tells us where your real block is.</div>
       <div class="options-grid">
-        <div class="option" onclick="selectOption(this,'q2','clarity')"><div class="opt-icon">🧭</div><div><div class="opt-title">Clarity</div><div class="opt-desc">I don’t know what to focus on.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q2','time')"><div class="opt-icon">⏳</div><div><div class="opt-title">Time</div><div class="opt-desc">I’m too busy to build something extra.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q2','discipline')"><div class="opt-icon">🔥</div><div><div class="opt-title">Discipline</div><div class="opt-desc">I start but don’t follow through.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q2','systems')"><div class="opt-icon">📋</div><div><div class="opt-title">Systems</div><div class="opt-desc">I need a repeatable process.</div></div></div>
+        <div class="option" onclick="selectOption(this, 'q1', 1)">
+          <div class="option-letter">A</div>
+          <div><div class="option-text">I have ideas but haven't written a single word yet</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q1', 2)">
+          <div class="option-letter">B</div>
+          <div><div class="option-text">I know I have a story worth telling but I don't know how to package it</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q1', 3)">
+          <div class="option-letter">C</div>
+          <div><div class="option-text">I've started writing but keep stopping and restarting</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q1', 4)">
+          <div class="option-letter">D</div>
+          <div><div class="option-text">I'm ready to write, publish, and sell — I just need the right system</div></div>
+        </div>
       </div>
-      <button class="back-btn" onclick="goBack()">← Back</button>
+      <div class="nav-row">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- QUESTION 3 -->
-  <section class="screen" id="q3">
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SCREEN 2: Q2 -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="screen" id="screen-q2">
     <div class="card">
-      <div class="headline" style="font-size:28px;">3) What kind of creator are you?</div>
+      <div class="question-label">Question 2 of 6</div>
+      <div class="question-text">What's your biggest block when it comes to writing?</div>
+      <div class="question-sub">Pick the one that hits closest to home.</div>
       <div class="options-grid">
-        <div class="option" onclick="selectOption(this,'q3','writer')"><div class="opt-icon">✍️</div><div><div class="opt-title">Writer</div><div class="opt-desc">I can write, I just need structure.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q3','talker')"><div class="opt-icon">🎙️</div><div><div class="opt-title">Talker</div><div class="opt-desc">I’d rather speak than write.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q3','visual')"><div class="opt-icon">🎥</div><div><div class="opt-title">Visual</div><div class="opt-desc">I like video and simple tools.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q3','builder')"><div class="opt-icon">🛠️</div><div><div class="opt-title">Builder</div><div class="opt-desc">Give me a system and I’ll execute.</div></div></div>
+        <div class="option" onclick="selectOption(this, 'q2', 1)">
+          <div class="option-letter">A</div>
+          <div><div class="option-text">Overthinking — I keep second-guessing myself before I even start</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q2', 2)">
+          <div class="option-letter">B</div>
+          <div><div class="option-text">Confidence — I don't feel qualified or like my story is worth telling</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q2', 3)">
+          <div class="option-letter">C</div>
+          <div><div class="option-text">Consistency — I start strong then life gets in the way</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q2', 4)">
+          <div class="option-letter">D</div>
+          <div><div class="option-text">Marketing — I can write it but I don't know how to sell it</div></div>
+        </div>
       </div>
-      <button class="back-btn" onclick="goBack()">← Back</button>
+      <div class="nav-row">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- QUESTION 4 -->
-  <section class="screen" id="q4">
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SCREEN 3: Q3 -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="screen" id="screen-q3">
     <div class="card">
-      <div class="headline" style="font-size:28px;">4) How much money do you want your story to make?</div>
+      <div class="question-label">Question 3 of 6</div>
+      <div class="question-text">How long have you been thinking about writing an eBook?</div>
+      <div class="question-sub">No judgment — this helps us understand where you really are.</div>
       <div class="options-grid">
-        <div class="option" onclick="selectOption(this,'q4','7')"><div class="opt-icon">💵</div><div><div class="opt-title">A few hundred</div><div class="opt-desc">I just want to get paid once.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q4','17')"><div class="opt-icon">💰</div><div><div class="opt-title">$1K/month</div><div class="opt-desc">Side income that helps.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q4','67')"><div class="opt-icon">📈</div><div><div class="opt-title">$3K+/month</div><div class="opt-desc">I want real recurring income.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q4','scale')"><div class="opt-icon">🏛️</div><div><div class="opt-title">Legacy brand</div><div class="opt-desc">Community + long-term impact.</div></div></div>
+        <div class="option" onclick="selectOption(this, 'q3', 1)">
+          <div class="option-letter">A</div>
+          <div><div class="option-text">It just crossed my mind recently</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q3', 2)">
+          <div class="option-letter">B</div>
+          <div><div class="option-text">A few months — I keep putting it off</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q3', 3)">
+          <div class="option-letter">C</div>
+          <div><div class="option-text">Over a year — I've started and stopped multiple times</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q3', 4)">
+          <div class="option-letter">D</div>
+          <div><div class="option-text">I'm ready right now — I just need the system</div></div>
+        </div>
       </div>
-      <button class="back-btn" onclick="goBack()">← Back</button>
+      <div class="nav-row">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- QUESTION 5 -->
-  <section class="screen" id="q5">
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SCREEN 4: Q4 -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="screen" id="screen-q4">
     <div class="card">
-      <div class="headline" style="font-size:28px;">5) What’s your biggest faith tension right now?</div>
+      <div class="question-label">Question 4 of 6</div>
+      <div class="question-text">Do you believe your story could genuinely help someone?</div>
+      <div class="question-sub">This matters more than you think — answer honestly.</div>
       <div class="options-grid">
-        <div class="option" onclick="selectOption(this,'q5','fear')"><div class="opt-icon">😰</div><div><div class="opt-title">Fear</div><div class="opt-desc">I’m scared to put myself out there.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q5','doubt')"><div class="opt-icon">🤔</div><div><div class="opt-title">Doubt</div><div class="opt-desc">I’m not sure God will bless this.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q5','conflict')"><div class="opt-icon">⚔️</div><div><div class="opt-title">Conflict</div><div class="opt-desc">Business feels worldly / not Kingdom.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q5','obedience')"><div class="opt-icon">🙏</div><div><div class="opt-title">Obedience</div><div class="opt-desc">I know what to do, I just haven’t done it.</div></div></div>
+        <div class="option" onclick="selectOption(this, 'q4', 1)">
+          <div class="option-letter">A</div>
+          <div><div class="option-text">100% yes — I've been through things that would help a lot of people</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q4', 2)">
+          <div class="option-letter">B</div>
+          <div><div class="option-text">Maybe — I think so, but I'm not sure who would care</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q4', 3)">
+          <div class="option-letter">C</div>
+          <div><div class="option-text">Probably — but I don't feel qualified to write about it</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q4', 4)">
+          <div class="option-letter">D</div>
+          <div><div class="option-text">Absolutely — and I'm ready to turn it into a product people pay for</div></div>
+        </div>
       </div>
-      <button class="back-btn" onclick="goBack()">← Back</button>
+      <div class="nav-row">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- QUESTION 6 -->
-  <section class="screen" id="q6">
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SCREEN 5: Q5 -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="screen" id="screen-q5">
     <div class="card">
-      <div class="headline" style="font-size:28px;">6) What would make this week a win for you?</div>
+      <div class="question-label">Question 5 of 6</div>
+      <div class="question-text">How often do you actually sit down and write?</div>
+      <div class="question-sub">Be real — this tells us what system you actually need.</div>
       <div class="options-grid">
-        <div class="option" onclick="selectOption(this,'q6','start')"><div class="opt-icon">✅</div><div><div class="opt-title">Start</div><div class="opt-desc">I need to take my first real step.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q6','finish')"><div class="opt-icon">🏁</div><div><div class="opt-title">Finish</div><div class="opt-desc">I need to complete something and ship it.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q6','sell')"><div class="opt-icon">🧾</div><div><div class="opt-title">Sell</div><div class="opt-desc">I need my first paying customer.</div></div></div>
-        <div class="option" onclick="selectOption(this,'q6','systems')"><div class="opt-icon">⚙️</div><div><div class="opt-title">Systems</div><div class="opt-desc">I need a repeatable weekly process.</div></div></div>
+        <div class="option" onclick="selectOption(this, 'q5', 1)">
+          <div class="option-letter">A</div>
+          <div><div class="option-text">Never — I keep meaning to but it doesn't happen</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q5', 2)">
+          <div class="option-letter">B</div>
+          <div><div class="option-text">Sometimes — when I feel inspired, but it's not consistent</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q5', 3)">
+          <div class="option-letter">C</div>
+          <div><div class="option-text">Weekly — I make time but I lose momentum between sessions</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q5', 4)">
+          <div class="option-letter">D</div>
+          <div><div class="option-text">Consistently — I write regularly and I'm ready to finish and publish</div></div>
+        </div>
       </div>
-      <button class="back-btn" onclick="goBack()">← Back</button>
+      <div class="nav-row">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- LOADING SCREEN -->
-  <section class="screen" id="screen-loading">
-    <div class="card loading">
-      <div class="spinner"></div>
-      <div class="headline" style="font-size:26px;">Building your Kingdom roadmap…</div>
-      <p class="subhead" id="loadingMsg">Reviewing your business stage…</p>
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SCREEN 6: Q6 -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="screen" id="screen-q6">
+    <div class="card">
+      <div class="question-label">Question 6 of 6</div>
+      <div class="question-text">What would publishing your eBook mean to you?</div>
+      <div class="question-sub">God honors specificity. What's the real reason behind this?</div>
+      <div class="options-grid">
+        <div class="option" onclick="selectOption(this, 'q6', 1)">
+          <div class="option-letter">A</div>
+          <div><div class="option-text">Proving to myself that I can actually finish something</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q6', 2)">
+          <div class="option-letter">B</div>
+          <div><div class="option-text">Helping someone else avoid what I went through</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q6', 3)">
+          <div class="option-letter">C</div>
+          <div><div class="option-text">Building an income stream that doesn't depend on trading my time</div></div>
+        </div>
+        <div class="option" onclick="selectOption(this, 'q6', 4)">
+          <div class="option-letter">D</div>
+          <div><div class="option-text">All three — legacy, impact, and income from one product</div></div>
+        </div>
+      </div>
+      <div class="nav-row">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- RESULT SCREEN -->
-  <section class="screen" id="result">
-    <div class="card" id="resultCard"></div>
-    <button class="back-btn" onclick="restartQuiz()">Restart Quiz</button>
-  </section>
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SCREEN: LOADING -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="screen" id="screen-loading">
+    <div class="card">
+      <div class="loading-screen">
+        <div class="loading-icon">✦</div>
+        <h2 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--white);margin-bottom:8px;">Identifying Your Creator Type…</h2>
+        <p style="font-size:14px;color:var(--text-light);">Matching your answers to the right roadmap</p>
+        <div class="loading-bar-track">
+          <div class="loading-bar-fill"></div>
+        </div>
+        <div class="loading-text" id="loadingMsg">Reviewing your writing stage…</div>
+      </div>
+    </div>
+  </div>
 
-</div>
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SCREEN: RESULTS (dynamically filled) -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="screen" id="screen-result">
+    <div class="card" id="resultCard">
+      <!-- Filled by JS -->
+    </div>
+    <p class="disclaimer">
+      Soul Prosperity · eBook Creator Assessment for Blue-Collar Christian Business Owners<br>
+      30-Day Money-Back Guarantee on all paid products. No questions asked.
+    </p>
+  </div>
+
+</div><!-- /quiz-wrapper -->
 
 <script>
-// ─────────────────────────────────────────
-// CONFIG
-// ─────────────────────────────────────────
-const GHL_WEBHOOK = 'https://services.leadconnectorhq.com/hooks/ucphPUkSafuQF0ZCZh1T/webhook-trigger/ff82f7a8-b8a7-489f-a555-12d66a96bfc0';
+// ─── STATE ───────────────────────────────────────────────
+const state = {
+  currentScreen: 'intro',
+  history: ['intro'],
+  answers: {},
+  firstName: '',
+  email: '',
+};
 
-// FastPayDirect checkout URLs
+const TOTAL_Q = 6;
+
+// ─── RESULT PROFILES ─────────────────────────────────────
+const profiles = {
+  seedling: {
+    emoji: '💭',
+    label: 'Your eBook Creator Type',
+    title: 'The Overthinker',
+    desc: "You have ideas — real ones. Experiences that could genuinely help people. But somewhere between the idea and the page, you get stuck in your own head. You keep waiting to feel ready, qualified, or inspired. Here's what nobody told you: the waiting IS the block.",
+    offer: {
+      eyebrow: 'Your Recommended First Step',
+      name: 'How to Write a 40-Page eBook (Even If You\'ve Never Written a Grocery List)',
+      price: '$7',
+      priceLabel: 'one-time · instant download',
+      bullets: [
+        'Turn your story into a sellable digital product — fast',
+        'Habakkuk 2:2 framework: Write the vision and make it plain',
+        '12-chapter structure that works for ANY blue-collar niche',
+        'Viral marketing strategy to launch without paid ads',
+        'From PDF to Amazon KDP — step-by-step publishing guide',
+      ],
+      cta: 'Get the eBook for $7 →',
+      ctaUrl: 'https://link.fastpaydirect.com/payment-link/69ef5c807dd3512d9207b2a2',
+    },
+    upsell: 'Add the AI Writing Toolkit for $97 — 100+ prompts so you never face a blank page again.',
+    scripture: '"Write the vision and make it plain on tablets, that he may run who reads it." — Habakkuk 2:2',
+  },
+  builder: {
+    emoji: '📖',
+    label: 'Your eBook Creator Type',
+    title: 'The Story Holder',
+    desc: "You've been through real things. Seasons that would have broken most people. And somewhere in the back of your mind you know your story has value — but you've been holding it in. Not because you don't have something to say. Because you don't feel qualified to say it.",
+    offer: {
+      eyebrow: 'Your Recommended Next Step',
+      name: 'eBook + Audiobook Bundle',
+      price: '$17',
+      priceLabel: 'one-time · instant access',
+      bullets: [
+        'eBook to study the framework + Audiobook to absorb it on the job',
+        'Listen in the truck, on the jobsite, between calls',
+        'Storytelling formulas that convert readers into buyers',
+        'Faith-based marketing strategy that doesn\'t feel salesy',
+        'Build your first digital product while running your trade business',
+      ],
+      cta: 'Get the Bundle for $17 →',
+      ctaUrl: 'https://link.fastpaydirect.com/payment-link/69ef5e77557558e89e524ca3',
+    },
+    upsell: 'Add the AI Writing Toolkit for $97 — done-for-you chapter templates so your story becomes a product fast.',
+    scripture: '"They overcame by the word of their testimony." — Revelation 12:11',
+  },
+  operator: {
+    emoji: '✍️',
+    label: 'Your eBook Creator Type',
+    title: 'The Inconsistent Starter',
+    desc: "You've started. Maybe more than once. You have a Google Doc, a notes app full of ideas, maybe even a few chapters. But life keeps interrupting and you keep restarting. The problem isn't motivation — it's the absence of a system that works around your real life.",
+    offer: {
+      eyebrow: 'Your Recommended Next Step',
+      name: 'Online Course Bundle',
+      price: '$67',
+      priceLabel: 'one-time · lifetime access',
+      bullets: [
+        'Full eBook + Audiobook + Paperback + complete video course',
+        'Modern eBook Blueprint Mastery — write, publish, and sell your first digital product',
+        'writing, publishing, formatting, and selling your Kingdom eBook',
+        'Kingdom Systems framework for blue-collar businesses',
+        '30-day implementation roadmap with weekly milestones',
+      ],
+      cta: 'Get the Course Bundle for $67 →',
+      ctaUrl: 'https://link.fastpaydirect.com/payment-link/69ef5fc0557558e89e524ca5',
+    },
+    upsell: 'Add the AI Writing Toolkit for $97 — fill-in-the-blank chapter templates so every 20-minute session produces real pages.',
+    scripture: '"Commit your work to the LORD, and your plans will be established." — Proverbs 16:3',
+  },
+  scaler: {
+    emoji: '🚀',
+    label: 'Your eBook Creator Type',
+    title: 'The Ready Builder',
+    desc: "You know you have something worth publishing. You have the story, the confidence, and the drive. What you need now is the complete system — write it, publish it, market it, sell it — and a community of builders who are doing the same thing at your level.",
+    offer: {
+      eyebrow: 'Your Recommended Next Step',
+      name: 'Skool Community — Money Masters Academy',
+      price: 'Free 7-day trial',
+      priceLabel: 'then $47/month · cancel anytime',
+      bullets: [
+        'Live coaching calls with Terrance Gee every month',
+        'Private community of Christian business owners at your level',
+        'Kingdom Systems curriculum — full course library included',
+        'Accountability partners who actually understand the grind',
+        'Annual plan available: $247/year (save $317)',
+      ],
+      cta: 'Start My Free 7-Day Trial →',
+      ctaUrl: 'https://skool.com/money-masters-academy-5443/about',
+    },
+    upsell: 'Add the AI Writing Toolkit for $97 — 30 TikTok and Reels scripts to market your book the moment it is published.',
+    scripture: '"For I know the plans I have for you, declares the LORD, plans to prosper you." — Jeremiah 29:11',
+  },
+};
+
+// ─── SCORING ─────────────────────────────────────────────
+function getProfile() {
+  const a = state.answers;
+  let score = 0;
+  // q1: business stage
+  score += (a.q1 || 1);
+  // q2: struggle (scale toward systems/scale)
+  score += (a.q2 || 1);
+  // q3: learner type (community = higher)
+  score += (a.q3 || 1);
+  // q5: support (community = higher)
+  score += (a.q5 || 1);
+  // q6: revenue goal
+  score += ((a.q6 || 1) * 1.5);
+  // max ~22.5, min ~5
+  if (score <= 9)  return 'seedling';
+  if (score <= 14) return 'builder';
+  if (score <= 18) return 'operator';
+  return 'scaler';
+}
+
+// ─── NAVIGATION ───────────────────────────────────────────
+const screenOrder = ['intro','q1','q2','q3','q4','q5','q6','loading','result'];
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  const el = document.getElementById('screen-' + id);
+  el.classList.add('active');
+  state.currentScreen = id;
+  updateProgress(id);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function updateProgress(id) {
+  const wrap = document.getElementById('progressWrap');
+  const qMatch = id.match(/^q(\d+)$/);
+  if (qMatch) {
+    const qNum = parseInt(qMatch[1]);
+    wrap.style.display = 'block';
+    document.getElementById('progressLabel').textContent = `Question ${qNum} of ${TOTAL_Q}`;
+    const pct = Math.round(((qNum - 1) / TOTAL_Q) * 100);
+    document.getElementById('progressPct').textContent = pct + '%';
+    document.getElementById('progressFill').style.width = pct + '%';
+  } else if (id === 'loading') {
+    wrap.style.display = 'block';
+    document.getElementById('progressLabel').textContent = 'Calculating your result…';
+    document.getElementById('progressPct').textContent = '100%';
+    document.getElementById('progressFill').style.width = '100%';
+  } else {
+    wrap.style.display = 'none';
+  }
+}
+
+function goBack() {
+  state.history.pop();
+  const prev = state.history[state.history.length - 1] || 'intro';
+  showScreen(prev);
+}
+
+function goNext(current) {
+  const idx = screenOrder.indexOf(current);
+  const next = screenOrder[idx + 1];
+  state.history.push(next);
+  showScreen(next);
+}
+
+// ─── CONFIG ──────────────────────────────────────────────
+const GHL_WEBHOOK = 'https://services.leadconnectorhq.com/hooks/ucphPUkSafuQF0ZCZh1T/webhook-trigger/54531478-e2bc-406b-9500-35242e28e4ff';
 const CHECKOUT_URLS = {
   seedling: 'https://link.fastpaydirect.com/payment-link/69ef5c807dd3512d9207b2a2',
   builder:  'https://link.fastpaydirect.com/payment-link/69ef5e77557558e89e524ca3',
   operator: 'https://link.fastpaydirect.com/payment-link/69ef5fc0557558e89e524ca5',
   scaler:   'https://skool.com/money-masters-academy-5443/about'
 };
-
-// OPTIONAL: bump URLs (if you add a bump later)
-const BUMP_URLS = {
-  seedling: 'https://link.fastpaydirect.com/payment-link/69ef5e77557558e89e524ca3', // upgrade to $17
-  builder:  'https://link.fastpaydirect.com/payment-link/69ef5f4f557558e89e524ca4', // upgrade to $27
-  operator: 'https://link.fastpaydirect.com/payment-link/69ef60c87dd3512d9207b2ac', // lifetime $497
-  scaler:   'https://link.fastpaydirect.com/payment-link/69ef60c87dd3512d9207b2ac', // lifetime $497
-};
-
-// ─────────────────────────────────────────
-// STATE
-// ─────────────────────────────────────────
-const state = {
-  firstName: '',
-  email: '',
-  answers: {},
-  history: ['screen-optin']
-};
-
-// ─────────────────────────────────────────
-// HELPERS
-// ─────────────────────────────────────────
-function showScreen(id) {
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  updateProgress(id);
-}
-
-function updateProgress(screenId) {
-  const stepLabel = document.getElementById('stepLabel');
-  const pctLabel = document.getElementById('progressPct');
-  const fill = document.getElementById('progressFill');
-
-  const order = ['screen-optin','q1','q2','q3','q4','q5','q6','screen-loading','result'];
-  const idx = order.indexOf(screenId);
-
-  // Count only q1-q6 as steps
-  const qIdx = Math.max(0, Math.min(6, idx));
-  const pct = Math.round((qIdx / 6) * 100);
-
-  const displayStep = Math.min(3, Math.max(1, Math.ceil(qIdx/2))); // "Step 1 of 3" grouping
-  stepLabel.textContent = `Step ${displayStep} of 3`;
-  pctLabel.textContent = `${pct}%`;
-  fill.style.width = `${pct}%`;
-}
-
-function goBack() {
-  if (state.history.length <= 1) return;
-  state.history.pop();
-  const prev = state.history[state.history.length - 1];
-  showScreen(prev);
-}
-
-function restartQuiz() {
-  state.answers = {};
-  state.history = ['screen-optin'];
-  showScreen('screen-optin');
-}
-
-function goNext(currentKey) {
-  const flow = { q1: 'q2', q2: 'q3', q3: 'q4', q4: 'q5', q5: 'q6', q6: 'screen-loading' };
-  const next = flow[currentKey];
-  state.history.push(next);
-  showScreen(next);
-}
-
-function pixelEvent(name, params) {
-  try { fbq('track', name, params || {}); } catch (e) {}
-}
+const UPSELL_URL   = 'https://link.fastpaydirect.com/payment-link/69fe563e34d67b041e7e8747'; // $97 Kingdom eBook AI Writing Toolkit
+const THANKYOU_URL = 'https://gmoney0112-create.github.io/soul-prosperity-quiz-funnel/thank-you.html';
 
 function sendToGHL(payload) {
   fetch(GHL_WEBHOOK, {
@@ -608,108 +926,12 @@ function sendToGHL(payload) {
   }).catch(() => {});
 }
 
-function getProfile() {
-  // simple scoring based on q1
-  const q1 = state.answers.q1 || 'seedling';
-  return q1;
+function pixelEvent(name, data) {
+  try { if (window.fbq) fbq('track', name, data || {}); } catch(e) {}
+  try { if (window.gtag) gtag('event', name, data || {}); } catch(e) {}
 }
 
-// ─────────────────────────────────────────
-// PROFILES
-// ─────────────────────────────────────────
-const profiles = {
-  seedling: {
-    emoji: '🌱',
-    label: 'Kingdom Stage Result',
-    title: 'Kingdom Seedling',
-    desc: 'You have the vision and the hunger — now you need a simple, repeatable system to get your first book finished and published.',
-    offer: {
-      eyebrow: 'Your recommended next step',
-      name: 'How to Write a 40-Page eBook (Even If You’ve Never Written a Grocery List)',
-      price: '$7',
-      priceLabel: 'one-time',
-      bullets: [
-        '40-page framework you can finish this weekend',
-        '12 chapter titles mapped in under 60 minutes',
-        'Faith-first mindset + execution plan',
-        'Publish your first product fast — no perfection required'
-      ],
-      cta: 'Get the $7 eBook →',
-      ctaUrl: CHECKOUT_URLS.seedling
-    },
-    upsell: 'If you’d rather listen than read, upgrade to the $17 audiobook bundle inside the community.',
-    scripture: '"Write the vision and make it plain." — Habakkuk 2:2'
-  },
-  builder: {
-    emoji: '🧱',
-    label: 'Kingdom Stage Result',
-    title: 'Grinding Builder',
-    desc: 'You’re working — but you need a cleaner system and stronger consistency to stop leaking momentum and income.',
-    offer: {
-      eyebrow: 'Your recommended next step',
-      name: 'Audiobook Bundle + Worksheets',
-      price: '$17',
-      priceLabel: 'one-time',
-      bullets: [
-        'Audio-first: build while you drive and grind',
-        'Templates + worksheets to finish faster',
-        'Simple plan to get to your first $1K/month',
-        '30-day money-back guarantee'
-      ],
-      cta: 'Get the $17 Bundle →',
-      ctaUrl: CHECKOUT_URLS.builder
-    },
-    upsell: 'Want the full implementation system? The $67 course bundle maps it step-by-step.',
-    scripture: '"Whatever you do, work at it with all your heart." — Colossians 3:23'
-  },
-  operator: {
-    emoji: '⚙️',
-    label: 'Kingdom Stage Result',
-    title: 'Kingdom Operator',
-    desc: 'You’re already making money — now it’s time to systemize, multiply, and turn your story into predictable revenue.',
-    offer: {
-      eyebrow: 'Your recommended next step',
-      name: 'Modern eBook Blueprint Mastery (Course Bundle)',
-      price: '$67',
-      priceLabel: 'one-time',
-      bullets: [
-        'Full course system: from idea → product → funnel',
-        'Price it, package it, and sell it consistently',
-        'Build an offer that supports your family',
-        '30-day money-back guarantee'
-      ],
-      cta: 'Get the $67 Course Bundle →',
-      ctaUrl: CHECKOUT_URLS.operator
-    },
-    upsell: 'If you’re ready for a brotherhood + coaching, step into Money Masters Academy.',
-    scripture: '"The plans of the diligent lead surely to abundance." — Proverbs 21:5'
-  },
-  scaler: {
-    emoji: '🚀',
-    label: 'Kingdom Stage Result',
-    title: 'Kingdom Scaler',
-    desc: 'You’re thinking legacy. Now you need community, coaching, and a Kingdom system that compounds monthly.',
-    offer: {
-      eyebrow: 'Your recommended next step',
-      name: 'Money Masters Academy — Skool Community',
-      price: 'Free 7-day trial',
-      priceLabel: 'then $47/mo',
-      bullets: [
-        'Monthly live coaching calls',
-        'Private community of Kingdom builders',
-        'Annual plan available: $247/year'
-      ],
-      cta: 'Start My Free Trial →',
-      ctaUrl: CHECKOUT_URLS.scaler
-    },
-    upsell: 'If you’re staying longer than a year, lifetime access is the obvious play.',
-    scripture: '"For I know the plans I have for you." — Jeremiah 29:11'
-  }
-};
-
-// ─────────────────────────────────────────
-// OPTION SELECT
-// ─────────────────────────────────────────
+// ─── OPTION SELECTION ────────────────────────────────────
 function selectOption(el, qKey, value) {
   el.closest('.options-grid').querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
   el.classList.add('selected');
@@ -717,9 +939,7 @@ function selectOption(el, qKey, value) {
   setTimeout(() => goNext(qKey), 340);
 }
 
-// ─────────────────────────────────────────
-// START QUIZ
-// ─────────────────────────────────────────
+// ─── START QUIZ ──────────────────────────────────────────
 function startQuiz() {
   const name = document.getElementById('firstName').value.trim();
   const email = document.getElementById('emailInput').value.trim();
@@ -734,12 +954,10 @@ function startQuiz() {
   showScreen('q1');
 }
 
-// ─────────────────────────────────────────
-// LOADING → RESULT
-// ─────────────────────────────────────────
+// ─── LOADING → RESULT ────────────────────────────────────
 function startLoading() {
   const msgs = [
-    'Reviewing your business stage…',
+    'Reviewing your writing stage…',
     'Mapping your learning style…',
     'Identifying your #1 growth lever…',
     'Crafting your Kingdom roadmap…',
@@ -763,9 +981,7 @@ function startLoading() {
   }, 2700);
 }
 
-// ─────────────────────────────────────────
-// BUILD RESULT PAGE
-// ─────────────────────────────────────────
+// ─── BUILD RESULT PAGE ───────────────────────────────────
 function buildResult(profileKey) {
   const p = profiles[profileKey];
   const name = state.firstName;
@@ -818,9 +1034,7 @@ function handleCheckout(profileKey, url) {
   window.open(url, '_blank');
 }
 
-// ─────────────────────────────────────────
-// WIRE LOADING SCREEN
-// ─────────────────────────────────────────
+// ─── WIRE LOADING SCREEN ──────────────────────────────────
 // Observe when loading screen becomes active
 const observer = new MutationObserver(() => {
   if (document.getElementById('screen-loading').classList.contains('active')) {
@@ -830,12 +1044,5 @@ const observer = new MutationObserver(() => {
 });
 observer.observe(document.getElementById('screen-loading'), { attributes: true, attributeFilter: ['class'] });
 </script>
-
-<footer style="width:100%;max-width:680px;margin:24px auto 0;padding:14px 16px;text-align:center;font-size:12px;color:rgba(138,155,189,0.95)">
-  <a href="/soul-prosperity-quiz-funnel/privacy.html" style="color:rgba(232,201,106,0.95);text-decoration:none">Privacy</a>
-  <span style="opacity:0.5">·</span>
-  <a href="/soul-prosperity-quiz-funnel/terms.html" style="color:rgba(232,201,106,0.95);text-decoration:none">Terms</a>
-</footer>
-
 </body>
 </html>
